@@ -59,6 +59,18 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
+        /* Responsive Footer */
+        @media (max-width: 768px) {
+            .footer-content {
+                gap: 12px;
+            }
+
+            .facebook-btn {
+                padding: 8px 16px;
+                font-size: 0.85em;
+            }
+        }
+
         /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
@@ -72,7 +84,6 @@
 
         .main-container {
             display: flex;
-			flex-wrap: wrap;
             gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
@@ -81,8 +92,6 @@
         }
 
         .container {
-			display: flex;
-			flex-wrap: wrap;
             max-width: 800px;
             width: 100%;
             border-radius: 15px;
@@ -94,8 +103,6 @@
         }
 
         h1 {
-			display: flex;
-			flex-wrap: wrap;
             color: #28a745;
             text-align: center;
             font-size: 2.2em;
@@ -108,8 +115,6 @@
         }
 
         h2 {
-			display: flex;
-			flex-wrap: wrap;
             color: #28a745;
             font-size: 1.6em;
             margin-top: 25px;
@@ -119,8 +124,6 @@
         }
 
         h3 {
-			display: flex;
-			flex-wrap: wrap;
             color: #495057;
             font-size: 1.1em;
             margin-bottom: 15px;
@@ -128,8 +131,6 @@
 
         /* Navigation Tabs */
         .nav-tabs {
-			display: flex;
-			flex-wrap: wrap;
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
@@ -138,8 +139,6 @@
         }
 
         .nav-btn {
-			display: flex;
-			flex-wrap: wrap;
             background-color: #f8f9fa;
             color: #343a40;
             padding: 10px 18px;
@@ -168,8 +167,7 @@
 
         /* Section Styles */
         .section {
-			display: flex;
-			flex-wrap: wrap;
+            display: none;
             padding: 25px;
             width: 100%;
             box-sizing: border-box;
@@ -225,7 +223,6 @@
         /* Slider Container */
         .slider-container {
             display: flex;
-			flex-wrap: wrap;
             align-items: center;
             gap: 15px;
             margin-top: 10px;
@@ -311,9 +308,7 @@
         }
 
         .slider-value {
-			display: flex;
-			flex-wrap: wrap;
-            min-width: 40px;
+            min-width: 60px;
             text-align: center;
             padding: 8px;
             border: 1px solid #ced4da;
@@ -639,6 +634,64 @@
                 margin-left: 0;
                 margin-top: 20px;
                 position: static;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                border-radius: 10px;
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 2em;
+                flex-direction: column;
+            }
+
+            .nav-tabs {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .nav-btn {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+
+            .section {
+                padding: 20px 15px;
+            }
+
+            .input-group {
+                margin: 20px 0;
+            }
+
+            .slider-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .slider-value {
+                width: 100%;
+            }
+
+            .tooltip .tooltiptext {
+                width: 160px;
+                font-size: 0.8em;
+            }
+
+            .sidebar {
+                width: 100%;
+                margin-left: 0;
+                position: static;
+            }
+
+            .partner {
+                width: 120px;
+            }
+
+            .partner img {
+                height: 80px;
             }
         }
 
