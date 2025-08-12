@@ -650,7 +650,14 @@
         		align-items: center;  /* Make them full width in column layout */
     		}
 			
-            .container,
+            .container {
+        		position: static;      /* Remove sticky on mobile */
+        		margin-left: 0;        /* Remove side margin */
+        		margin-top: 20px;      /* Space between sections */
+        		width: 90%;           /* Full width on mobile */
+        		max-width: 500px;
+   			 }
+			
     		.sidebar {
         		position: static;      /* Remove sticky on mobile */
         		margin-left: 0;        /* Remove side margin */
