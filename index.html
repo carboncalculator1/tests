@@ -25,7 +25,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
         .footer-text {
@@ -40,56 +40,53 @@
             margin: 0;
 		}
 
-		
-
         .footer-text strong {
             color: #28a745;
         }
 
-        .facebook-btn {
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 0.9em;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .facebook-btn:hover {
-            background-color: #218838;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-		.gmail-btn {
-    		display: inline-block;
-    		background-color: #D44638; /* Gmail red */
-    		color: white;
-    		padding: 8px 12px;
-    		margin-left: 10px;
-    		border-radius: 4px;
-    		text-decoration: none;
-    		font-size: 14px;
+		/* row holding the buttons */
+		.social-buttons {
+  			display:flex;
+  			gap:10px;            /* space between the buttons */
+  			align-items:center;
+  			flex-wrap:wrap;      /* wrap on very small screens */
 		}
 
-        /* Responsive Footer */
-        @media (max-width: 768px) {
-            .footer-content {
-                gap: 12px;
-            }
+        /* common button styles */
+		.facebook-btn, .gmail-btn {
+  			display:inline-flex;
+  			align-items:center;
+  			gap:8px;
+  			text-decoration:none;
+  			color:#fff;
+  			padding:8px 12px;
+  			border-radius:6px;
+  			font-size:14px;
+  			font-weight:600;
+  			box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+		}
+		
+        /* Facebook style */
+		.facebook-btn {
+  			background: #1877F2;
+		}
 
-            .facebook-btn {
-                padding: 8px 16px;
-                font-size: 0.85em;
-            }
-        }
+		/* Gmail / email style */
+		.gmail-btn {
+  			background: #D44638; /* Gmail red */
+		}
 
+		/* icon spacing */
+		.facebook-btn i, .gmail-btn i {
+  			font-size:16px;
+  			line-height:1;
+		}
+
+		/* hover states */
+		.facebook-btn:hover { opacity:0.95; transform: translateY(-1px); }
+		.gmail-btn:hover    { opacity:0.95; transform: translateY(-1px); }
+
+		
         /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
@@ -734,6 +731,11 @@
         }
 
         @media (max-width: 480px) {
+
+			.footer-content { align-items:center; }
+  			.facebook-btn, .gmail-btn { padding:10px 14px; font-size:15px; }
+
+			
             body {
                 padding: 10px;
             }
@@ -1080,22 +1082,24 @@
 <!-- Add this right before the closing </body> tag -->
 <!-- Add this before the closing </body> tag -->
 <footer class="site-footer">
-    <div class="footer-content">
-        <a href="https://www.facebook.com/share/p/1EhnQWLuTE/"
-           target="_blank"
-           class="facebook-btn">
-            <i class="fab fa-facebook-f"></i> Follow Us
-        </a>
+  <div class="footer-content">
+    <div class="social-buttons" aria-hidden="false">
+      <a href="https://www.facebook.com/share/p/1EhnQWLuTE/" target="_blank" class="facebook-btn" aria-label="Follow us on Facebook">
+        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+        <span>Follow Us</span>
+      </a>
 
-        <a href="mailto:info@climateyanga.com"
-           class="gmail-btn">
-            <i class="fas fa-envelope"></i> Contact Us
-        </a>
-
-        <p class="contact-text">Contact Us on: info@climateyanga.com</p>
-        <p class="footer-text">A climate awareness and action initiative by: <strong>Carbon Calculator Yanga Foundation, © 2025</strong></p>
+      <a href="mailto:info@climateyanga.com" class="gmail-btn" aria-label="Contact us by email">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <span>Contact Us</span>
+      </a>
     </div>
+
+    <p class="contact-text">Contact Us on: info@climateyanga.com</p>
+    <p class="footer-text">A climate awareness and action initiative by: <strong>Carbon Calculator Yanga Foundation, © 2025</strong></p>
+  </div>
 </footer>
+
 
 
    
