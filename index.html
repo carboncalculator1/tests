@@ -640,25 +640,35 @@
         }
 
         @media (max-width: 768px) {
+			.main-container {
+                flex-direction: column;
+                align-items: center;
+            }
+			
             .container {
-                border-radius: 10px;
-                max-width: 100%;
+                max-width: 700px;
+				width: 100%;
    				justify-content: center;
 				align-items: center;
             }
 
 			.sidebar {
+				max-width: 700px;
                 width: 100%;
                 margin-left: 0;
+                position: static;
+				margin-left: 0;
+                margin-top: 20px;
                 position: static;
             }
 
 			.slider-container {
     			max-width: 300px;
-				width: 100%;
+    			width: 100%;
     			flex-direction: column;
     			align-items: center;
-				justify-content: center;
+    			justify-content: center;
+    			margin-left: 10px;
 			}
 
             h1 {
